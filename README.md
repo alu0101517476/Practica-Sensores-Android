@@ -353,3 +353,5 @@ En el siguiente vídeo se muestra el funcionamiento de la aplicación:
 Como se puede apreciar, algunos sensores no los reconoce ya que el dispositivo Android con el que se grabó el vídeo no tiene estos sensores. Estos sensores son los de temperatura ambiente, humedad y presión. Todos los demás sensores funcionaban correctamente, incluido el del guerrero que se rota sobre sí mismo para mirar siempre al norte magnético. Para representar el norte, puse el cubo rojo en la posición (0, 1, 10) que es el que se ve en el vídeo.
 
 En el siguiente vídeo se muestra como es la ejecución del juego en un teléfono, el anterior vídeo era una grabación de pantalla de la ejecución del juego.
+
+![Video 2](Img/Sensores%20IRL.gif)
