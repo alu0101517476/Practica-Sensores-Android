@@ -348,4 +348,4 @@ public class GuerreroController : MonoBehaviour
 
 En el siguiente vídeo se muestra el funcionamiento de la aplicación:
 
-![Video](Sensores edit.gif)
+![Video](Img/Sensores%20edit.gif)
