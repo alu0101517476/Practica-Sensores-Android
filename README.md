@@ -56,18 +56,15 @@ Durante el desarrollo de la práctica, se siguieron los siguientes pasos técnic
 
 ### Paso 1: Configuración del Input System
 Se instaló el paquete *Input System* y se configuró el backend en modo **"Both"**. Esto fue crucial porque:
-* El *New Input System* maneja mejor los sensores rápidos (Acelerómetro, Giroscopio).
-* El *Legacy Input Manager* sigue siendo necesario para acceder al `LocationService` (GPS) y la `Compass` (Brújula), que aún no tienen una implementación estable en el nuevo sistema.
+- El *New Input System* maneja mejor los sensores rápidos (Acelerómetro, Giroscopio).
+
+- El *Legacy Input Manager* sigue siendo necesario para acceder al `LocationService` (GPS) y la `Compass` (Brújula), que aún no tienen una implementación estable en el nuevo sistema.
 
 ### Paso 2: Gestión de Hardware Inexistente (Evitar "New Text")
-Inicialmente, la interfaz mostraba "New Text" en sensores que el móvil no tenía.
-* **Solución:** Se implementó un patrón de verificación de nulos: `if (Sensor.current != null)`.
-* **Resultado:** Ahora la UI informa explícitamente si un sensor no es soportado por el dispositivo o si está desactivado.
+Inicialmente, la interfaz mostraba "New Text" en sensores que el móvil no tenía. Por tanto, para solucionar esto, se implementó un patrón de verificación de nulos: `if (Sensor.current != null)`. Con esto, ahora la UI informa explícitamente si un sensor no es soportado por el dispositivo o si está desactivado.
 
 ### Paso 3: Corrección del Contador de Pasos
-El sensor `StepCounter` devolvía siempre valor 0 a pesar de agitar el dispositivo.
-* **Causa:** Android considera los pasos como información sensible y requiere permisos especiales.
-* **Solución:**
+El sensor `StepCounter` devolvía siempre valor 0 a pesar de agitar el dispositivo. Esto es debido a que, Android considera los pasos como información sensible y requiere permisos especiales. Para solucionar esto, se hizo lo siguiente:
     1.  Se añadió `<uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />` al manifiesto.
     2.  Se inyectó código C# (`UnityEngine.Android.Permission`) en el `Start()` para solicitar al usuario permiso mediante una ventana emergente (pop-up).
 
