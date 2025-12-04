@@ -21,8 +21,6 @@ La práctica aborda dos tareas fundamentales de interacción multimodal:
 
 ## Stack Tecnológico y Configuración
 
-* **Motor:** Unity 2022.3 / 6 (o superior).
-* **Plataforma de Despliegue:** Android.
 * **Paquetes:** `com.unity.inputsystem` (Input System).
 * **Configuración Crítica del Player:**
     * *Active Input Handling:* **"Both"** (Ambos). Necesario para mezclar `UnityEngine.InputSystem` (Acelerómetro/Giroscopio) con `UnityEngine.Input` (LocationService/Compass).
