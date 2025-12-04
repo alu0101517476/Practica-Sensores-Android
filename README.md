@@ -60,7 +60,7 @@ Se instaló el paquete *Input System* y se configuró el backend en modo **"Both
 
 - El *Legacy Input Manager* sigue siendo necesario para acceder al `LocationService` (GPS) y la `Compass` (Brújula), que aún no tienen una implementación estable en el nuevo sistema.
 
-### 2: Gestión de Hardware Inexistente (Evitar "New Text")
+### 2: Gestión de Hardware Inexistente
 Inicialmente, la interfaz mostraba "New Text" en sensores que el móvil no tenía. Por tanto, para solucionar esto, se implementó un patrón de verificación de nulos: `if (Sensor.current != null)`. Con esto, ahora la UI informa explícitamente si un sensor no es soportado por el dispositivo o si está desactivado.
 
 ### 3: Corrección del Contador de Pasos
