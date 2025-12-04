@@ -349,3 +349,5 @@ public class GuerreroController : MonoBehaviour
 En el siguiente vídeo se muestra el funcionamiento de la aplicación:
 
 ![Video](Img/Sensores%20edit.gif)
+
+Como se puede apreciar, algunos sensores no los reconoce ya que el dispositivo Android con el que se grabó el vídeo no tiene estos sensores. Estos sensores son los de temperatura ambiente, humedad, presión y pasos que siempre se quedaba en 0, aunque habilitara los permisos para la actividad física en Android. Todos los demás sensores funcionaban correctamente, incluido el del personaje orientandose al norte.
